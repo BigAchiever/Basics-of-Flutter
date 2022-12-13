@@ -5,7 +5,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     int days = 30;
     String name = "Danish Ali Siddiqui";
     var day = "Tuesday";
