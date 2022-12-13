@@ -7,58 +7,71 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       color: Colors.white,
-      child: Column(
-        children: [
-          Image.asset(
-            "assets/images/undraw_Mindfulness_re_v7j6.png",
-            fit: BoxFit.cover,
-            // height: 300,
-          ),
-          const SizedBox(
-            height: 20.0,
-          ),
-          const Text(
-            "Welcome Back",
-            style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 20.0,
             ),
-          ),
+            Image.asset(
+              "assets/images/undraw_Mindfulness_re_v7j6.png",
+              fit: BoxFit.cover,
+              height: 400,
+            ),
 
-          // Adding Padding to the input fields
-          Padding(
-            padding:
-                const EdgeInsets.symmetric(vertical: 25.0, horizontal: 50.0),
-            child: Column(
-              children: [
-                // Input fields of login page
-                TextFormField(
-                  decoration: const InputDecoration(
-                    hintText: "Enter Username",
-                    labelText: "Username",
-                  ),
-                ),
+            const Text(
+              "Welcome ",
+              style: TextStyle(
+                fontSize: 35,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(
+              height: 18.0,
+            ),
 
-                TextFormField(
-                  obscureText: true,
-                  decoration: const InputDecoration(
-                    hintText: "Enter Password",
-                    labelText: "Password",
+            // Adding Padding to the input fields
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 20.0,
+                horizontal: 50.0,
+              ),
+              child: Column(
+                children: [
+                  // Input fields of login page
+                  TextFormField(
+                    decoration: const InputDecoration(
+                      hintText: "Enter Username",
+                      labelText: "Username",
+                    ),
                   ),
-                ),
-                const SizedBox(
-                  height: 20.0,
-                ),
-                ElevatedButton(
+
+                  TextFormField(
+                    obscureText: true,
+                    decoration: const InputDecoration(
+                      hintText: "Enter Password",
+                      labelText: "Password",
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 50.0,
+                  ),
+                  ElevatedButton(
                     onPressed: () {
-                      print("Hi Danish");
+                      Navigator.pushNamed(context, "/home");
                     },
-                    style: TextButton.styleFrom(),
-                    child: Text("Login")),
-              ],
+                    style:
+                        TextButton.styleFrom(minimumSize: const Size(90, 42)),
+                    child: const Text(
+                      "Login",
+                      style: TextStyle(fontSize: 16),
+                    ),
+                  )
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
