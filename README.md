@@ -1,4 +1,4 @@
-# Learning
+# FlappyBird Game
 
 A new Flutter project.
 
